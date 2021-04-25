@@ -118,4 +118,4 @@ client.on("messageReactionAdd", (reaction, user) => {
     }
 })
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
