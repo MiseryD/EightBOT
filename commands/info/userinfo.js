@@ -27,7 +27,7 @@ module.exports = {
       .addField("**ID**", `${member.id}`, true)
       .addField("**Statut**", statuses[member.presence.status], true)
       .addField(
-        `**Roles Count**`,
+        `**Nombre de Roles**`,
         message.guild.members.cache.get(member.user.id).roles.cache.size ||
           "Aucuns rôles!",
         true
