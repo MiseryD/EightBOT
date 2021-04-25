@@ -118,4 +118,22 @@ client.on("messageReactionAdd", (reaction, user) => {
     }
 })
 
+bot.on("messageReactionAdd", (reaction, user) => {
+    if (user.bot) return
+    if (reaction.emoji.name == "✅") {
+        reaction.message.channel.send('Tu as réagi : ✅');
+        reaction.message.guild.channels.create(`ticket de ${user.username}`, {
+            type: 'text',
+            parent: "827203603805634580",
+            permissionOverwrites: [{
+                id: reaction.message.guild.id,
+                deny: ['SEND_MESSAGES'],
+                allow: ['ADD_REACTIONS']
+            }]
+        }).then(channel_ticket => {
+            channel_ticket.send("Channel crée !")
+        })
+    }
+})
+
 client.login(process.env.TOKEN);
