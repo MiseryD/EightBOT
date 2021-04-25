@@ -23,18 +23,15 @@ module.exports = {
       .setTitle(member.user.username)
       .setColor(Color)
       .setThumbnail(member.user.displayAvatarURL())
-      .addField("**Nom Complet**", member.user.tag, true)
-      .addField("**ID**", `${member.id}`, true)
-      .addField("**Statut**", statuses[member.presence.status], true)
-      .addField(
-        `**Roles Count**`,
-        message.guild.members.cache.get(member.user.id).roles.cache.size ||
-          "Aucuns rôles!",
-        true
-      )
-      .addField(`**Avatar**`, `[Link](${member.user.displayAvatarURL()})`, true)
-      .addField("**A rejoint le serveur le**", member.joinedAt.toDateString())
-      .addField("**A rejoint Discord le**", member.user.createdAt.toDateString())
+      .setTitle(`**__Information sur ${user.username}#${user.discriminator} :__**`)
+        .addField('**ID du compte :**', `${user.id}`, true)
+        .addField('**Pseudo sur le serveur :**', `${member.nickname ? member.nickname : 'Aucun'}`, true)
+        .addField('**A crée son compte le :**', `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('**A rejoint le serveur le :**', `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('**Status :**', `${user.presence.status}`, true)
+        .addField('Joue a :', `${user.presence.game ? user.presence.game.name : 'Rien'}`, true)
+        .addField('**Roles :**', member.roles.cache.map(roles => `${roles.name}`).join(', '), true)
+        .addField(`En réponse a :`,`${message.author.username}#${message.author.discriminator}`)
       .setFooter(`Demandé par ${message.author.username}`)
       .setTimestamp();
 
