@@ -136,7 +136,7 @@ client.on('messageReactionAdd', async(reaction, user) => {
             let username = user.username;
             let categoryID = "827203603805634580";
             let channel = await message.guild.channels.create(`ticket-${username}`, {type: 'text', parent: message.guild.channels.get(categoryID)});
-            catch(err => {
+            .catch(err => {
                 message.channel.send('Il y a eu une erreur dans le [MessageReactionAdd]') 
             }); 
 
