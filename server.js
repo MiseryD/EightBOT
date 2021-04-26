@@ -97,7 +97,7 @@ client.on('guildMemberAdd', (member) => {
 client.on('guildMemberRemove', (member) => {
   //Lorsqu'un utilisateur Quitte.
   let leaveChannel = client.channels.cache.get('825362499934617620'); 
-  leaveChannel.send('Au revoir, <@' + member.user.id + '> ! 🙂');
+  leaveChannel.send('**Au revoir**, <@' + member.user.id + '> ! 🙂');
 });
 
 client.login(process.env.TOKEN);
