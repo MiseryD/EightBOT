@@ -114,7 +114,6 @@ client.on('ready', async () => {
     let SendChannel = guild.channel.cache.get('825414904894455818')
     SendChannel.send(OpenTicket)
     .then(msg => msg.react('🎫'))
-}
 })
 
 client.on('messageReactionAdd', async(reaction, user) => {
