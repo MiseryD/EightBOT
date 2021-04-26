@@ -78,7 +78,7 @@ client.on("message", async message => {
     command.run(client, message, args);
   }
   console.log(
-    `User : ${message.author.tag} (${message.author.id}) Server : ${message.guild.name} (${message.guild.id}) Command : ${command.name}`
+    `Utilisateur : ${message.author.tag} (${message.author.id}) Serveur : ${message.guild.name} (${message.guild.id}) Commande : ${command.name}`
   );
 });
 
