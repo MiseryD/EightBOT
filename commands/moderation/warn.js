@@ -29,8 +29,7 @@ module.exports = {
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
 
-    let warnChannel = client.channels.cache.get('855156424735588352');
-    warnChannel.send(new Discord.MessageEmbed()
+   let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`__**WARN**__`)
       .addField(`**Moderateur**`, `<@${message.author.id}>`)
