@@ -55,7 +55,7 @@ module.exports = {
         .setTimestamp();
       if (User && Member.bot === false)
         Member.send(
-          `Vous avez été banni du serveur **MiseryCord** pour ${Reason ||
+          `Vous avez été banni du serveur **VALORANT FR** pour ${Reason ||
             "Non spécifiée !"}`
         );
       message.channel.send(embed);
@@ -67,7 +67,7 @@ module.exports = {
     } catch (error) {
       return message.channel
         .send(
-          `**Je ne peux pas bannir ce membre Peut-être que le membre a un rôle plus élevé que moi**`
+          `**✅ Membre BAN **`
         )
         .then(() => console.log(error));
     }
