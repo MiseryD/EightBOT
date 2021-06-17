@@ -87,9 +87,7 @@ client.on('guildMemberAdd', (member) => {
   let welcomeChannel = client.channels.cache.get('855154973125640192');
   welcomeChannel.send('**Bienvenue** <@' + member.user.tag + '> ! 👋');
 
-  member.roles.add('834857843525812228');
-  member.roles.add('826032153141051392');
-  member.roles.add('826028532555317251');
+  member.roles.add('855153584735518770');
 
   member.send('**Bienvenue** sur le serveur **__MiseryCord__** ! Lis attentivement les règles et coche le case en dessous pour avoir accès au serveur ! Si tu rencontre un problème contacte <@541992802146451476> en messages privés 😉');
 });
