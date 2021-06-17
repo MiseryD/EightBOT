@@ -54,6 +54,7 @@ module.exports = {
         .addField(`**Raison**`, `${Reason || "Non spécifiée !"}`)
         .setFooter(`Ban par ${message.author.username}`)
         .setTimestamp();
+      
       if (User && Member.bot === false)
         Member.send(
           `Vous avez été banni du serveur **VALORANT FR** pour ${Reason ||
