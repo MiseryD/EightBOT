@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`✔ BOT PRÊT ✔`);
   client.user
-    .setActivity(`twitch.tv/MiseryyD👾`, { type: "STREAMING", url: 'https://twitch.tv/MiseryyD' })
+    .setActivity(`VALORANT`, { type: "PLAYING", url: 'https://twitch.tv/MiseryyD' })
     .catch(error => console.log(error));
 });
 
