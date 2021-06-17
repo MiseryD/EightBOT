@@ -29,7 +29,7 @@ module.exports = {
       `Warnings_${message.guild.id}_${Member.user.id}`
     );
 
-    let embed = new MessageEmbed()
+    let embed = new MessageEmbed('855154973125640192')
       .setColor(Color)
       .setTitle(`__**WARN**__`)
       .addField(`**Moderateur**`, `<@${message.author.id}>`)
