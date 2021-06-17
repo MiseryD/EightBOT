@@ -96,5 +96,4 @@ client.on('guildMemberRemove', (member) => {
   leaveChannel.send('Au revoir, <@' + member.user.id + '> ! 🙂');
 });
 
-
 client.login(process.env.TOKEN);
