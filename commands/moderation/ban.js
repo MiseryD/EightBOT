@@ -45,6 +45,7 @@ module.exports = {
       setTimeout(function() {
         User.ban({ reason: `${Reason || "Non spécifiée !"}` });
       }, 2000);
+      
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
         .setTitle(`__**BAN**__`)
