@@ -46,7 +46,7 @@ module.exports = {
         User.ban({ reason: `${Reason || "Non spécifiée !"}` });
       }, 2000);
       
-      let embed = new Discord.MessageEmbed()
+      let embed = new MessageEmbed()
         .setColor(Color)
         .setTitle(`__**BAN**__`)
         .addField(`**Moderateur**`, `<@${message.author.id}>`)
@@ -58,6 +58,7 @@ module.exports = {
         Member.send(
           `Vous avez été banni du serveur **VALORANT FR** pour ${Reason ||
             "Non spécifiée !"}`
+         
         );
       message.channel.send(embed);
       console.log(
