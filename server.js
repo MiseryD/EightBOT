@@ -84,19 +84,15 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', (member) => {
   //Lorsqu'un Utilisateur Rejoint.
-  let welcomeChannel = client.channels.cache.get('825362499934617620');
+  let welcomeChannel = client.channels.cache.get('855154973125640192');
   welcomeChannel.send('**Bienvenue**, <@' + member.user.id + '> ! 👋');
 
-  member.roles.add('834857843525812228');
-  member.roles.add('826032153141051392');
-  member.roles.add('826028532555317251');
-
-  member.send('**Bienvenue** sur le serveur **__MiseryCord__** ! Lis attentivement les règles et coche le case en dessous pour avoir accès au serveur ! Si tu rencontre un problème contacte <@541992802146451476> en messages privés 😉');
+  member.send('**Bienvenue** sur le serveur **__VALORANT FR__**, lis attentivement les règles dans le salon <#855152790087270401>. Une fois cela fait, si tu souhaite jouer avec les autres jouers tu peux aller dans le salon <#855154473047162881> pour obtenir le rôle joueur 😉. Bon amusement ! ');
 });
 
 client.on('guildMemberRemove', (member) => {
   //Lorsqu'un utilisateur Quitte.
-  let leaveChannel = client.channels.cache.get('825362499934617620'); 
+  let leaveChannel = client.channels.cache.get('855154973125640192'); 
   leaveChannel.send('**Au revoir**, <@' + member.user.id + '> ! 🙂');
 });
 
