@@ -84,7 +84,7 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', (member) => {
   //Lorsqu'un Utilisateur Rejoint.
-  let welcomeChannel = client.channels.cache.get('855154973125640192');
+  let welcomeChannel = client.channels.cache.get('855127116155453551');
   welcomeChannel.send('**Bienvenue**, <@' + member.user.id + '> ! 👋');
 
   member.send('**Bienvenue** sur le serveur **__VALORANT FR__**, lis attentivement les règles dans le salon <#855152790087270401>. Une fois cela fait, si tu souhaite jouer avec les autres jouers tu peux aller dans le salon <#855154473047162881> pour obtenir le rôle joueur 😉. Bon amusement ! ');
@@ -92,7 +92,7 @@ client.on('guildMemberAdd', (member) => {
 
 client.on('guildMemberRemove', (member) => {
   //Lorsqu'un utilisateur Quitte.
-  let leaveChannel = client.channels.cache.get('855154973125640192'); 
+  let leaveChannel = client.channels.cache.get('855127116155453551'); 
   leaveChannel.send('**Au revoir**, <@' + member.user.id + '> ! 🙂');
 });
 
