@@ -84,7 +84,7 @@ client.on("message", async message => {
 
 client.on('guildMemberAdd', (member) => {
   //Lorsqu'un Utilisateur Rejoint.
-  let welcomeChannel = client.channels.cache.get('855127116155453551');
+  let welcomeChannel = client.channels.cache.get('855154973125640192');
   
   welcomeChannel.send('**Bienvenue** <@' + member.user.tag + '> ! 👋');
 
@@ -95,7 +95,7 @@ client.on('guildMemberAdd', (member) => {
 
 client.on('guildMemberRemove', (member) => {
   //Lorsqu'un utilisateur Quitte.
-  let leaveChannel = client.channels.cache.get('855127116155453551');
+  let leaveChannel = client.channels.cache.get('855154973125640192');
   
   leaveChannel.send('Au revoir, <@' + member.user.tag + '> ! 🙂');
 });
