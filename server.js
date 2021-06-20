@@ -89,7 +89,7 @@ client.on('guildMemberAdd', (member) => {
   member.send('**Bienvenue** sur le serveur **__VALORANT FR__** ! Lis attentivement les règles et clique sur la réaction en dessous pour pouvoir jouer avec les autres joueurs. Bon amusement !');
 });
 
-  member.roles.add('855897246218715196')
+  member.roles.add('855897246218715196');
 
 client.on('guildMemberRemove', (member) => {
   //Lorsqu'un utilisateur Quitte.
