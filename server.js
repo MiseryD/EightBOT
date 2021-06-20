@@ -82,7 +82,7 @@ client.on("message", async message => {
   );
 });
 
-client.on('guildMemberAdd', (member) => {
+client.on('guildMemberAdd', member => {
   //Lorsqu'un Utilisateur Rejoint.
   let welcomeChannel = client.channels.cache.get('855154973125640192');
   welcomeChannel.send('**Bienvenue** <@' + member.user.id + '> ! 👋');
