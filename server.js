@@ -86,7 +86,7 @@ client.on('guildMemberAdd', (member) => {
   //Lorsqu'un Utilisateur Rejoint.
   let welcomeChannel = client.channels.cache.get('855154973125640192');
   welcomeChannel.send('**Bienvenue** <@' + member.user.id + '> ! 👋');
-  member.send('**Bienvenue** sur le serveur **__VALORANT FR__** ! Lis attentivement les règles et clique sur la réaction en dessous pour pouvoir jouer avec les autres joueurs. Bon amusement !');
+  member.send('**Bienvenue** sur le serveur **__VALORANT FR__** ! Lis attentivement les règles dans le salon <#855152790087270401> et clique sur la réaction en dessous pour pouvoir jouer avec les autres joueurs. Bon amusement !');
 });
 
 client.on('guildMemberRemove', (member) => {
