@@ -49,7 +49,7 @@ module.exports = {
       }, 2000);
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
-        .setTitle(`__**KICK__**`)
+        .setTitle(`**__KICK__**`)
         .addField(`**Moderateur**`, `<@${message.author.id}>`)
         .addField(`**Membre expulsé**`, `<@${Member.id}>`)
         .addField(`**Raison**`, `${Reason || "Non spécifiée !"}`)
