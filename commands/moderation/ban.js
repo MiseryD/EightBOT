@@ -42,35 +42,33 @@ module.exports = {
 
     try {
       console.log(`La personne a bien été ban !`);
+    
       setTimeout(function() {
-        User.ban({ reason: `${Reason || "Non spécifiée !"}` });
+        User.kick({ reason: `${Reason || "Non spécifiée !"}` });
       }, 2000);
-      
-      let embed = new MessageEmbed()
+      let embed = new Discord.MessageEmbed()
         .setColor(Color)
-        .setTitle(`__**BAN**__`)
+        .setTitle(`**__BAN__**`)
         .addField(`**Moderateur**`, `<@${message.author.id}>`)
-        .addField(`**Membre banni**`, `<@${Member.tag}>`)
+        .addField(`**Membre ban**`, `<@${Member.id}>`)
         .addField(`**Raison**`, `${Reason || "Non spécifiée !"}`)
         .setFooter(`Ban par ${message.author.username}`)
         .setTimestamp();
-      
       if (User && Member.bot === false)
         Member.send(
-          `Vous avez été banni du serveur **VALORANT FR** pour ${Reason ||
+          `Vous avez été Ban du serveur VALORANT FR pour ${Reason ||
             "Non spécifiée !"}`
-         
         );
       message.channel.send(embed);
       console.log(
-        `${Member.tag} (${Member.id}) viens d'être banni de ${
+        `**${Member.tag} (${Member.id}) c'est fait kick**${
           message.guild.name
         } Pour ${Reason || "Non spécifiée !"}`
       );
     } catch (error) {
       return message.channel
         .send(
-          `**✅ Membre BAN **`
+          `**Je ne peux pas kick ce membre. Peut-être que le membre a un rôle plus élevé que moi**`
         )
         .then(() => console.log(error));
     }
@@ -78,3 +76,4 @@ module.exports = {
     //End
   }
 };
+
