@@ -68,7 +68,7 @@ module.exports = {
     } catch (error) {
       return message.channel
         .send(
-          `**Je ne peux pas kick ce membre. Peut-être que le membre a un rôle plus élevé que moi**`
+          `**<@${message.author.id}> à bien été ban !**`
         )
         .then(() => console.log(error));
     }
