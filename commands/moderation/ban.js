@@ -68,7 +68,7 @@ module.exports = {
     } catch (error) {
       return message.channel
         .send(
-          `**<@${message.author.id}> à bien été ban !**`
+          `** ✅ ${banMember.user.username}** à bien été ban !`
         )
         .then(() => console.log(error));
     }
