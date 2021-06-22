@@ -57,7 +57,7 @@ module.exports = {
         .setTimestamp();
       if (User && Member.bot === false)
         Member.send(
-          `Vous avez été expulsé du serveur MiseryCord pour ${Reason ||
+          `Vous avez été expulsé du serveur VALORANT FR pour ${Reason ||
             "Non spécifiée !"}`
         );
       message.channel.send(embed);
