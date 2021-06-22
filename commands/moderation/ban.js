@@ -44,7 +44,7 @@ module.exports = {
       console.log(`La personne a bien été ban !`);
     
       setTimeout(function() {
-        User.kick({ reason: `${Reason || "Non spécifiée !"}` });
+        User.ban({ reason: `${Reason || "Non spécifiée !"}` });
       }, 2000);
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
