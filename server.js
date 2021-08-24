@@ -9,7 +9,7 @@ client.db = require("quick.db");
 client.on("ready", async () => {
   console.log(`✔ BOT PRÊT ✔`);
   client.user
-    .setActivity(`VALORANT`, { type: "PLAYING" })
+    .setActivity(`EIGHT GANG`, { type: "WATCHING" })
     .catch(error => console.log(error));
 });
 
